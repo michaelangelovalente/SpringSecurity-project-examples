@@ -1,13 +1,14 @@
-package it.beije.onlusbackend;
+package com.example.springsecurity2;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+
 // Connection Tester
 public class TestJdbc {
 
 	public static void main(String[] args) {
 		 
-		String jdbcUrl = "jdbc:mysql://localhost:3306/onlus?useSSL=false";
+		String jdbcUrl = "jdbc:mysql://localhost:3306/bank";
 		//String jdbcUrl = "jdbc:mysql://localhost:3306/<insert_schema>?useSSL=false";
 		String user ="root";
 		String pass = "beije";
@@ -16,10 +17,6 @@ public class TestJdbc {
 			Connection myConn = 
 					DriverManager.getConnection(jdbcUrl, user, pass);
 			System.out.println("Connection successful!");
-
-
-
-			
 		}catch(Exception exc) {
 			exc.printStackTrace();
 		}
