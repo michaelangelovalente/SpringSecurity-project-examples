@@ -13,10 +13,6 @@ public class AccountController {
     @Autowired
     private AccountsRepository accountsRepository;
 
-    @GetMapping("/myAccount")
-    public String getAccountDetails(){
-        return "Here are your account details";
-    }
 
     @GetMapping("/myAccount")
     public Accounts getAccountDetails(@RequestParam int id){
