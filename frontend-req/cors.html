@@ -5,20 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>My Website</title>
-    <link rel="stylesheet" href="./style.css" />
-    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
   </head>
   <body>
-    <script>
+    <!-- <script>
       function test() {
         fetch("http://localhost:8080/notices")
           .then((response) => response.json())
           .then((data) => console.log("result: ", data));
       }
-    </script>
+    </script> -->
 
     <main>
-      <button onclick="test()">Click me for CORS</button>
+      <button onclick="test2()">Click me for CORS</button>
+
+      <div>
+        <h3>Lista</h3>
+
+        <ul id="list"></ul>
+        <script>
+          function test2() {
+            const url = "http://localhost:8080/notices";
+            let ul = document.getElementById("list");
+            fetch(url)
+              .then((response) => response.json())
+              .then((data) => {
+                console.log("Data: ", data);
+                data.forEach(function (object) {
+                  let li = document.createElement("li");
+                  li.innerHTML =
+                    object.noticeId +
+                    " - " +
+                    object.noticeSummary +
+                    " - " +
+                    object.noticeDetails;
+                  ul.append(li);
+                });
+              });
+          }
+        </script>
+      </div>
     </main>
   </body>
 </html>
