@@ -11,7 +11,7 @@ import java.sql.Date;
 public class Contact {
 
     @Id
-    @Column(name = "contact_id")
+    @Column(name = "contact_id") //noJson ->autogen
     private String contactId;
 
     @Column(name = "contact_name")
@@ -26,7 +26,7 @@ public class Contact {
     @Column(name="message")
     private String message;
 
-    @Column(name = "create_dt")
+    @Column(name = "create_dt")//noJson ->autogen
     private Date createDt;
 
     public String getContactId() {

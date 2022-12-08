@@ -15,6 +15,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.provisioning.JdbcUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 
@@ -45,11 +46,13 @@ public class ProjectSecurityConfig {
 
         //.csrf().disable() --> disables csrf, which is enabled by default in Spring
         http.cors().configurationSource(configurationSource)
+
+//              .and().csrf().disable() // --> deactivates CSRF --> NOT RECOMMENDED
+                .and().csrf().ignoringAntMatchers("/register", "/contact").csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse()) // this allows clients to read the cookie with JS
                 .and()
-                .csrf().disable()
                 .authorizeRequests()
                 .antMatchers("/myAccount", "myBalance", "myLoans", "myCards","/user").authenticated()
-                .antMatchers( "/notices", "/contacts", "/register").permitAll()
+                .antMatchers( "/notices", "/register").permitAll()
                 .and().formLogin()
                 .and().httpBasic();
 

@@ -1,5 +1,6 @@
 package com.example.springsecurity2.controller;
 
+import ch.qos.logback.core.net.SyslogOutputStream;
 import com.example.springsecurity2.model.Customer;
 import com.example.springsecurity2.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,9 +53,9 @@ public class LoginController {
 
 
 
-    @RequestMapping("/user")
+    @RequestMapping("/user") // login --> TODO:REPLACE WITH POST
     public Customer getUserDetailsAfterLogin(Authentication authentication){
-
+        System.out.println("Inside user");
         List<Customer> customers = customerRepository.findByEmail(authentication.getName());
         if( customers.size() > 0){
             return customers.get(0);
