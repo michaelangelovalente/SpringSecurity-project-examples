@@ -67,15 +67,10 @@ public class ProjectSecurityConfig {
                 .addFilterBefore(new JWTTokenValidatorFilter(), BasicAuthenticationFilter.class) // generate token before authentication ( requires a JWT TOKEN IN REQUEST ) --> done with every api except login
                 .authorizeHttpRequests()
 
-                /* Authorities instead of Roles
-                .antMatchers("/myAccount").hasAuthority("VIEWACCOUNT")
-                .antMatchers("/myBalance").hasAnyAuthority("VIEWACCOUNT", "VIEWBALANCE")
-                .antMatchers("/myLoans").hasAuthority("VIEWLOANS")
-                .antMatchers("/myCards").hasAuthority("VIEWCARDS")*/
 
                 .antMatchers("/myAccount").hasRole("USER")
                 .antMatchers("/myBalance").hasAnyRole("USER","ADMIN")
-                .antMatchers("/myLoans").hasRole("USER")
+                .antMatchers("/myLoans").authenticated()
                 .antMatchers("/myCards").hasRole("USER")
 
 //                .antMatchers("/myAccount", "myBalance", "myLoans", "myCards","/user").authenticated()
