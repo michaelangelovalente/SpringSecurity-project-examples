@@ -3,6 +3,14 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Projects.iml" filepath="$PROJECT_DIR$/.idea/Projects.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Example2/springsecurity10/springsecurity10.iml" filepath="$PROJECT_DIR$/Example2/springsecurity10/springsecurity10.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Example2/springsecurity2/springsecurity2.iml" filepath="$PROJECT_DIR$/Example2/springsecurity2/springsecurity2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Example2/springsecurity3/springsecurity3.iml" filepath="$PROJECT_DIR$/Example2/springsecurity3/springsecurity3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Example2/springsecurity4/springsecurity4.iml" filepath="$PROJECT_DIR$/Example2/springsecurity4/springsecurity4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Example2/springsecurity5/springsecurity5.iml" filepath="$PROJECT_DIR$/Example2/springsecurity5/springsecurity5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Example2/springsecurity7/springsecurity7.iml" filepath="$PROJECT_DIR$/Example2/springsecurity7/springsecurity7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Example2/springsecurity8/springsecurity8.iml" filepath="$PROJECT_DIR$/Example2/springsecurity8/springsecurity8.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Example2/springsecurity9/springsecurity9.iml" filepath="$PROJECT_DIR$/Example2/springsecurity9/springsecurity9.iml" />
     </modules>
   </component>
 </project>
