@@ -1,6 +1,5 @@
 package com.example.springsecurity2.filter;
 
-import com.example.springsecurity2.constants.SecurityConstants;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;

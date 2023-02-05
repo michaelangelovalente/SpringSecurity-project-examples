@@ -1,9 +1,7 @@
 package com.example.springsecurity2.filter;
 
-import com.example.springsecurity2.constants.SecurityConstants;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
-import org.springframework.security.config.core.GrantedAuthorityDefaults;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
